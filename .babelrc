@@ -1,0 +1,32 @@
+{
+    "presets": [
+      ["env", {
+        "modules": false
+      }],
+      "stage-0",
+      "react"
+    ],
+    "plugins": [
+      ["transform-runtime", {
+        "polyfill": false,
+        "regenerator": true
+      }],
+      "transform-regenerator",
+      ["transform-imports", {
+        "routes": {
+          "transform": "routes/${member}",
+          "preventFullImport": true
+        },
+        "models": {
+          "transform": "models/${member}",
+          "preventFullImport": true
+        },
+        "components": {
+          "transform": "components/${member}",
+          "preventFullImport": true
+        }
+      }],
+      "syntax-dynamic-import"
+    ]
+  }
+  
